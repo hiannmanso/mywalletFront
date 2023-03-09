@@ -44,7 +44,7 @@ export const SignUpContainer = styled.div`
 	}
 	input {
 		box-sizing: border-box;
-		width: 100%;
+		width: 60%;
 		height: 58px;
 		margin-bottom: 13px;
 		border: none;
@@ -58,6 +58,11 @@ export const SignUpContainer = styled.div`
 		font-size: 20px;
 		line-height: 23px;
 		color: #000000;
+	}
+	@media (max-width:600px) {
+		input{
+			width: 100%;
+		}
 	}
 `;
 export const Logo = styled.img`

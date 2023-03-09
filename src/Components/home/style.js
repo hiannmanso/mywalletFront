@@ -23,13 +23,18 @@ export const Home = styled.div`
 
 			color: #ffffff;
 		}
+		img{
+			:hover{
+				scale: 1.1;
+			}
+		}
 	}
 	main {
 		overflow: scroll;
 		padding: 10px;
 		margin-bottom: 13px;
 		position: relative;
-		width: 326px;
+		width: 80%;
 		height: 446px;
 		flex-direction: column;
 		background: #ffffff;
@@ -107,8 +112,12 @@ export const Home = styled.div`
 	footer {
 		width: 85%;
 		display: flex;
+		align-items: center;
 		flex-direction: row;
-		justify-content: space-between;
+		button{
+			margin-left: 10px;
+		}
+		justify-content: center;
 	}
 	button {
 		display: flex;
@@ -137,7 +146,11 @@ export const Home = styled.div`
 
 		background: #a328d6;
 		border-radius: 5px;
+		:hover{
+			scale: 1.1;
+		}
 	}
+
 	.total {
 		position: absolute;
 		bottom: 10px;
@@ -169,6 +182,10 @@ export const Cancel = styled.h5`
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
-
+	:hover{
+		scale:1.2;
+		color:black;
+		cursor:pointer;
+	}
 	color: #c6c6c6;
 `;

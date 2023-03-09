@@ -37,7 +37,9 @@ export default function SignInComponent() {
 		<s.SignInContainer>
 			<s.Logo classname="logo" src={logo} alt="logo" />
 			<form onSubmit={loginUser}>
+				
 				<input
+					
 					type="email"
 					placeholder="E-mail"
 					value={email}

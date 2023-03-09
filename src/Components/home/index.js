@@ -17,18 +17,21 @@ export default function Home() {
 	const [total, setTotal] = useState(0);
 
 	function deleteTransaction(id) {
-		axios({
-			method: 'delete',
-			url: `${process.env.REACT_APP_URL}/transaction/${id}`,
-		})
-			.then((response) => {
-				console.log(response);
-				setLoadTransactions(!loadTransactions);
+		if(window.confirm('Deseja deletar esse item?')===true){
+			axios({
+				method: 'delete',
+				url: `${process.env.REACT_APP_URL}/transaction/${id}`,
 			})
-			.catch((error) => {
-				console.log(id);
-				console.log(error);
-			});
+				.then((response) => {
+					console.log(response);
+					setLoadTransactions(!loadTransactions);
+				})
+				.catch((error) => {
+					console.log(id);
+					console.log(error);
+				});
+			
+		}
 	}
 
 	useEffect(() => {
@@ -88,7 +91,10 @@ export default function Home() {
 					src={exit}
 					alt="skip"
 					onClick={() => {
-						navigation('/');
+						if(window.confirm('Deseja sair da sua conta?')===true){
+
+							navigation('/');
+						}
 					}}
 				/>
 			</header>
