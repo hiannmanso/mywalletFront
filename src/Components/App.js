@@ -6,6 +6,7 @@ import SignIn from '../Pages/SignIn';
 import SignUp from '../Pages/SignUp';
 import MyWallet from '../Pages/MyWallet';
 import Transaction from '../Pages/Transaction';
+import GlobalStyle from '../styles/global';
 
 export default function App() {
 	const [token, setToken] = useState('');
@@ -19,6 +20,8 @@ export default function App() {
 					<Route path="/transaction/:id" element={<Transaction />} />
 				</Routes>
 			</userContext.Provider>
+					<GlobalStyle/>
+					
 		</BrowserRouter>
 	);
 }
