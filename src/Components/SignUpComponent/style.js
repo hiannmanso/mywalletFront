@@ -37,6 +37,10 @@ export const SignUpContainer = styled.div`
 			line-height: 23px;
 
 			color: #ffffff;
+			:hover{
+				scale: 1.1;
+				cursor:pointer;
+			}
 		}
 	}
 	input:focus {

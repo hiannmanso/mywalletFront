@@ -25,8 +25,12 @@ export const TransactionContainer = styled.div`
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 23px;
-
+		
 		color: #ffffff;
+		:hover{
+			cursor:pointer;
+			scale:1.1;
+		}
 	}
 	form {
 		align-items: center;
