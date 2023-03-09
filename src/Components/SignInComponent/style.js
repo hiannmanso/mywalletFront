@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignUpContainer = styled.div`
+export const SignInContainer = styled.div`
 	//box-sizing: border-box;
 	background: #8c11be;
 	width: 100%;
@@ -8,7 +8,7 @@ export const SignUpContainer = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	padding-top: 40%;
+	justify-content: center;
 	align-items: center;
 	a {
 		text-decoration: none;

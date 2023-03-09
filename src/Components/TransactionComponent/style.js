@@ -29,6 +29,7 @@ export const TransactionContainer = styled.div`
 		color: #ffffff;
 	}
 	form {
+		align-items: center;
 		width: 80%;
 		display: flex;
 		flex-direction: column;

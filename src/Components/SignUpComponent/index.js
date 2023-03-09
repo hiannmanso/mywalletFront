@@ -23,7 +23,7 @@ export default function SignUpContainer() {
 		}
 		axios({
 			method: 'post',
-			url: 'http://localhost:5000/sign-up',
+			url: `${process.env.REACT_APP_URL}/sign-up`,
 			data: {
 				name,
 				email,

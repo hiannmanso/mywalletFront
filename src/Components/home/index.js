@@ -19,7 +19,7 @@ export default function Home() {
 	function deleteTransaction(id) {
 		axios({
 			method: 'delete',
-			url: `http://localhost:5000/transaction/${id}`,
+			url: `${process.env.REACT_APP_URL}/transaction/${id}`,
 		})
 			.then((response) => {
 				console.log(response);
@@ -35,7 +35,7 @@ export default function Home() {
 		console.log({ token });
 		axios({
 			method: 'get',
-			url: 'http://localhost:5000/sign-in',
+			url: `${process.env.REACT_APP_URL}/sign-in`,
 			headers: {
 				authorization: token,
 			},
@@ -55,7 +55,7 @@ export default function Home() {
 	useEffect(() => {
 		axios({
 			method: 'get',
-			url: `http://localhost:5000/transaction/${infoUser._id}`,
+			url: `${process.env.REACT_APP_URL}/transaction/${infoUser._id}`,
 		})
 			.then((response) => {
 				setUserTransaciton(response.data);

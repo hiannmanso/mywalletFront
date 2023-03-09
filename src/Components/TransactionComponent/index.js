@@ -25,7 +25,7 @@ export default function TransactionComponent() {
 
 		axios({
 			method: 'post',
-			url: `http://localhost:5000/transaction/${id}`,
+			url: `${process.env.REACT_APP_URL}/transaction/${id}`,
 			data: {
 				value,
 				description,
@@ -74,16 +74,8 @@ export default function TransactionComponent() {
 						onClick={sendTransaction}
 						value="Salvar Saida"
 					/>
-					// <input
-					// 	type="submit"
-					// 	className="submit"
-					// 	value={`Salvar Saida `}
-					// 	onClick={sendTransaction}
-					// />
 				)}
 			</form>
-			{/* teste
-			</input> */}
 		</s.TransactionContainer>
 	);
 }

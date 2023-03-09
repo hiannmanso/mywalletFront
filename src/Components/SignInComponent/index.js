@@ -18,7 +18,7 @@ export default function SignInComponent() {
 		try {
 			const validation = await axios({
 				method: 'post',
-				url: 'http://localhost:5000/sign-in',
+				url: `${process.env.REACT_APP_URL}/sign-in`,
 				data: {
 					email,
 					password,
@@ -34,7 +34,7 @@ export default function SignInComponent() {
 	}
 
 	return (
-		<s.SignUpContainer>
+		<s.SignInContainer>
 			<s.Logo classname="logo" src={logo} alt="logo" />
 			<form onSubmit={loginUser}>
 				<input
@@ -57,6 +57,6 @@ export default function SignInComponent() {
 				<input className="submit" type="submit" value="Entrar" />
 			</form>
 			<Link to="/sign-up">Primeira vez? Cadastre-se!</Link>
-		</s.SignUpContainer>
+		</s.SignInContainer>
 	);
 }

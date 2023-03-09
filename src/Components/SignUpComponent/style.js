@@ -7,7 +7,7 @@ export const SignUpContainer = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	padding-top: 40%;
+	justify-content: center;
 	align-items: center;
 	a {
 		text-decoration: none;
